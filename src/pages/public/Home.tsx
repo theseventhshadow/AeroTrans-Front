@@ -33,12 +33,21 @@ const features = [
 export default function Home() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-800 to-brand-600 pb-28 pt-16 sm:pb-36 sm:pt-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative overflow-hidden bg-brand-950 bg-cover bg-center pb-28 pt-24 sm:pb-36 sm:pt-32"
+        style={{ backgroundImage: "url('/hero-airport.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/75 to-brand-950/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-950/70 via-transparent to-brand-950/40" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Traslados privados,{' '}
-              <span className="text-accent-400">puerta a puerta</span>
+            <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur">
+              Traslados privados 24/7
+            </span>
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Tu traslado al aeropuerto,{' '}
+              <span className="text-accent-400">sin complicaciones</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-lg text-brand-100">
               Reserva tu traslado al aeropuerto o dentro de la ciudad en
@@ -47,9 +56,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto -mb-32 mt-10 max-w-5xl px-4 sm:-mb-40 sm:px-6 lg:px-8">
+        <div className="relative mx-auto -mb-32 mt-10 max-w-5xl px-4 sm:-mb-40 sm:px-6 lg:px-8">
           <BookingForm />
         </div>
+
+        <p className="relative mt-6 text-center text-[10px] text-white/30">
+          Foto: Andrew Heneen / Wikimedia Commons (CC BY 4.0)
+        </p>
       </section>
 
       <section className="bg-white pb-20 pt-40 sm:pt-48">
